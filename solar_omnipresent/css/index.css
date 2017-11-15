@@ -88,7 +88,7 @@ body {
 
 .content_block {
   margin: 2% auto;
-  width: 65%; 
+  width: 90%;
 }
 
 div.faq_container {
@@ -196,6 +196,10 @@ iPad 3
   
   #headlines {
     width: 50%;
+  }
+
+  .content_block {
+    width: 65%;
   }
   div.faq_container {
     justify-content: space-around;
