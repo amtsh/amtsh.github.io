@@ -9,6 +9,10 @@ body {
  min-height: 100vh;
 }
 
+.normal-font {
+  font-family: sans-serif;
+}
+
 .site {
   flex: 1;
 }
