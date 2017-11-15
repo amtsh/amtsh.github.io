@@ -1,0 +1,108 @@
+h1,h2,h3,h4,h5,h6,p {
+ line-height: 1.45;
+}
+h1 { font-size: 3.6rem; }
+h2 { font-size: 2.6rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.3rem; }
+h5 { font-size: 0.8rem; }
+h6 { font-size: 0.6rem; }
+
+.subtext {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.text-square {
+  font-family: 'Saira Semi Condensed', sans-serif;
+  font-size: 1rem;
+}
+
+.text-content {
+  font-size: 1.2rem;
+}
+
+.input-1 {
+  width: 200px;
+  height: 20px;
+  min-height: 20px;
+  border: 1px solid rgb(170, 170, 170);
+  font-size: 18px;
+  outline: rgb(17, 17, 17) none 0px;
+  padding: 10px 6px 10px 12px;
+  transition: background-image 0.2s ease-out 0s;
+}
+
+.input-bottomborder {
+  display:block;
+  font-size:1.1rem;
+  padding:10px 10px 10px 5px;
+  border:none;
+  border-bottom:1px solid #757575;
+  text-align: center;
+}
+
+.input-sm {
+  width:40px;
+}
+
+.input-lg {
+  width:60px;
+}
+
+.input-bottomborder:focus {
+  outline: none;
+}
+
+
+
+.button-1 {
+  cursor: pointer;
+  color: white;
+  background-color: #0AF;
+  width: 150px;
+  text-align: center;
+  border: 0px none rgb(17, 17, 17);
+  border-radius: 4px 4px 4px 4px;
+  font-size: 20px;
+  outline: rgb(255, 255, 255) none 0px;
+  padding: 7px;
+}
+
+
+/*---------------------------
+  White Button
+---------------------------*/
+
+.fb-message-white {
+  font-size: 1rem;
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #0084ff;
+  background-color: #fff;
+  border: 1px solid #0084ff;
+  width: 9rem;
+  
+  line-height: 2.4rem;
+  border-radius: 3px;
+  outline: none;
+}
+.fb-message-white:hover {
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+}
+.fb-message-white:focus {
+  outline: none;
+}
+
+.fb-message-white i {
+  background-image: url('//i.imgur.com/WFeWHxl.png');
+  background-repeat: no-repeat;
+  background-size: 1.2rem;
+  background-position: 0.625rem 0.625rem;
+  top: -1px;
+  height: 1.125rem;
+  width: 1.3rem;
+  padding: 0.62rem 0.43rem;
+  float: left;
+}
