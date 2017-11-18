@@ -1,0 +1,53 @@
+.q-block {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.q-block > .circle {
+  margin-right: 1rem;"
+}
+
+.form {
+  margin: 2rem 0 4rem 8rem;
+}
+
+.form-input {
+  margin-top: 1.5rem;
+}
+
+.form-action {
+  margin-top: 2.5rem;
+}
+
+.sender_form {
+  margin: 6rem 10rem;
+}
+
+.review-box {
+  padding: 1%;
+  border: 1px solid black;
+  width: 50rem;
+}
+
+.review-details {
+  margin: 4rem 4rem;
+}
+
+.review-details th {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.review-details th:last-child {
+  text-align: right;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.review-details td {
+  width: 50rem;
+  padding: 0.5rem;
+}

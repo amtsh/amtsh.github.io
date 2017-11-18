@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flyshyp - Package registration.</title>
+    <link rel="stylesheet" type="text/css" href="./css/component.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/form.css">
+  </head>
+  </head>
+  <body>
+
+    <div class="header-ribbon">
+      <a href="./index.html"><span class="logo">flyshyp</span></a>
+
+      <div class="main-actions">
+        <a href="./travelForm.html"><span class="span-text-2">Register trip</span></a>
+        <a href="./sendForm.html"><span class="span-text-2 red-text">Send package</span></a>
+      </div>
+    </div>
+
+    <div class="sender_form">
+      <div class="q-block where">
+        <div class="circle red center"><span class="white">1</span></div>
+        <h3 class="h3">Where would you like to send the package?</h3>
+      </div>
+
+      <div class="form">
+        <div class="form-input">
+          <label class="label display-3">Send from</label>
+          <select class="select">
+            <option>Select origin country</option>
+            <option>Japan</option>
+            <option>India</option>
+          </select>
+        </div>
+
+        <div class="form-input">
+          <label class="label display-3">Send to</label>
+          <select class="select">
+            <option>Select destination country</option>
+            <option>Japan</option>
+            <option>India</option>
+          </select>
+        </div>
+
+        <div class="form-action">
+          <button class="button button-xlg button-grey"><span class="span-text-bold span-text-black">Continue</span></button>
+        </div>
+      </div>
+
+      <div class="q-block contents">
+        <div class="circle grey center"><span class="white">2</span></div>
+        <h3 class="h3">What is inside the package?</h3>
+      </div>
+
+      <div class="form">
+        <label class="label display-3">Package contents</label>
+        <div class="form-input">
+          <div style="margin-bottom: 1rem">
+            <input id="checkbox-1" class="" name="packagecontent-select" type="checkbox" checked>
+            <label for="checkbox-1" class="display-2" style="margin-left: 1rem;">Documents / Books</label>
+          </div>
+          <div style="margin-bottom: 1rem">
+            <input id="checkbox-2" class="" name="packagecontent-select" type="checkbox" checked>
+            <label for="checkbox-2" class="display-2" style="margin-left: 1rem;">Packaged food / Sweets</label>
+            
+          </div>
+          <div style="margin-bottom: 1rem">
+            <input id="checkbox-3" class="" name="packagecontent-select" type="checkbox" checked>
+            <label for="checkbox-3" class="display-2" style="margin-left: 1rem;">Medicines</label>
+          </div>
+        </div>
+
+        <div class="form-input" style="margin-top: 3rem;">
+          <label class="label display-3">Package weight</label>
+          <input class="input span-text" type="text" name="" placeholder="200 grams">
+        </div>
+
+        <div class="form-action">
+          <button class="button button-xlg button-grey"><span class="span-text-bold span-text-black">Continue</span></button>
+        </div>
+      </div>
+
+      <div class="q-block recipient">
+        <div class="circle grey center"><span class="white">3</span></div>
+        <h3 class="h3">Who will receive the package?</h3>
+      </div>
+
+      <div class="form">
+        <div class="form-input">
+          <label class="label display-3">Name of the recipient</label>
+          <input class="input span-text" type="text" name="" placeholder="First and Last Name">
+        </div>
+
+        <div class="form-input">
+          <label class="label display-3">Phone number of recipient</label>
+          <input class="input span-text" type="text" name="" placeholder="+XX XXXXX XXXXX">
+        </div>
+
+        <div class="form-input">
+          <label class="label display-3">Nearby Post Office address of recipient</label>
+          <textarea class="textarea span-text" type="text" name="" placeholder="Yashio Post Office, Shinagawa, Tokyo 1400008"></textarea> 
+        </div>
+
+        <div class="form-action">
+          <button class="button button-xlg button-grey"><span class="span-text-bold span-text-black">Continue</span></button>
+        </div>
+      </div>
+
+      <div class="q-block details">
+        <div class="circle grey center"><span class="white">4</span></div>
+        <h3 class="h3">Who is sending the package?</h3>
+      </div>
+
+      <div class="form">
+        <div class="form-input">
+          <label class="label display-3">Name of the sender</label>
+          <input class="input span-text" type="text" name="" placeholder="First and Last Name">
+        </div>
+
+        <div class="form-input">
+          <label class="label display-3">Phone number of sender</label>
+          <input class="input span-text" type="text" name="" placeholder="+XX XXXXX XXXXX">
+        </div>
+
+        <div class="form-input">
+          <label class="label display-3">Nearby Post Office address of sender</label>
+          <textarea class="textarea span-text" type="text" name="" placeholder="Shivaji Nagar Post Office, Shivaji Nagar, Pune, Maharashtra 411005"></textarea> 
+        </div>
+
+        <div class="form-action">
+          <button class="button button-xlg button-grey"><span class="span-text-bold span-text-black">Continue</span></button>
+        </div>
+      </div>
+
+      <div class="q-block review">
+        <div class="circle grey center"><span class="white">5</span></div>
+        <h3 class="h3">Review the details</h3>
+      </div>
+
+      <div class="form review-box">
+        <div class="heading" style="margin-top: 2rem; text-align: center;"><span class="span-text-2">Send package from <span class="red-text">JAPAN</span> to <span class="red-text">INDIA</span></span></div>
+        <div class="review-body" style="margin: 2rem auto;">
+          
+          <table class="review-details">
+            <tr>
+              <th><h3 class="h3">Package details</h3></th>
+              <th><a href=""><h3>Edit</h3></a></th>
+            </tr>
+            <tr>
+              <td class="display-2">Package content</td>
+              <td class="align-right display-2">Documents</td>
+            </tr>
+            <tr>
+              <td class="display-2">Package weight</td>
+              <td class="align-right display-2">500 grams</td>
+            </tr>
+          </table>
+
+          <table class="review-details">
+            <tr>
+              <th><h3 class="h3">Sender details</h3></th>
+              <th><a href=""><h3>Edit</h3></a></th>
+            </tr>
+            <tr>
+              <td class="display-2">Name</td>
+              <td class="align-right display-2">Elon musk</td>
+            </tr>
+            <tr>
+              <td class="display-2">Phone number</td>
+              <td class="align-right display-2">+91 11111 11111</td>
+            </tr>
+            <tr>
+              <td class="display-2">Nearby Post Office address</td>
+              <td class="align-right display-2">Yashio Post Office, Shinagawa, Tokyo 1400008</td>
+            </tr>
+          </table>
+
+          <table class="review-details">
+            <tr>
+              <th><h3 class="h3">Recipient details</h3></th>
+              <th><a href=""><h3>Edit</h3></a></th>
+            </tr>
+            <tr>
+              <td class="display-2">Name</td>
+              <td class="align-right display-2">Demon musk</td>
+            </tr>
+            <tr>
+              <td class="display-2">Phone number</td>
+              <td class="align-right display-2">+91 11111 11111</td>
+            </tr>
+            <tr>
+              <td class="display-2">Nearby Post Office address</td>
+              <td class="align-right display-2">Shivaji Nagar Post Office, Pune, Maharashtra 411005</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="form-action center" style="margin-bottom: 2rem;">
+          <button class="button button-xxlg button-grey"><span class="span-text-bold span-text-black">Sign in with Facebook to continue</span></button>
+        </div>
+      </div>
+    </div>
+
+    <footer></footer>
+  </body>
+</html>

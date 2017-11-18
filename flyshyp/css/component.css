@@ -1,0 +1,205 @@
+* { margin:0; padding:0; font-size:100%;  box-sizing: border-box;}
+
+/* Colors */
+
+.grey {
+  background-color: grey;
+}
+
+.grey-text {
+  color: grey;
+}
+
+.red {
+  background-color: #E4132D;
+}
+
+.red-text {
+  color: #E4132D;
+}
+
+.white {
+  color: white;
+}
+
+.black {
+  background-color: black;
+}
+
+/* Typography */
+
+.h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.3px;
+  line-height: 1.3em;
+}
+
+.h2 {
+  font-size: 2rem;
+  letter-spacing: 0.4px;
+}
+
+.h3 {
+  font-size: 1.6rem;
+  letter-spacing: 0.4px;
+}
+
+.h4 {
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+}
+
+.display-1 {
+  font-size: 1.8rem;
+  font-weight: lighter;
+}
+
+.display-2 {
+  font-family: Helvetica;
+  font-weight: 200;
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+}
+
+.display-3 {
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+}
+
+.span-text-bold {
+  font-family: Helvetica;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+}
+
+.span-text {
+  font-family: Helvetica;
+  letter-spacing: 0.4px;
+}
+
+.span-text-black {
+  color: #2b2a2a;
+}
+
+.span-text-red {
+  color: #E4132D;
+}
+
+.span-text-2 {
+  font-family: Helvetica;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+.logo {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #E4132D;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Buttons */
+
+.button {
+  cursor: pointer;
+  padding: 0 2% 2% 2%;
+  height: 2.5rem;
+  outline: none;
+}
+
+.button-sm {
+  width: 9.5rem;
+}
+
+.button-lg {
+  width: 13.5rem;
+}
+
+.button-grey, .button-grey:focus {
+  background: #D8D8D8;
+  border: 1px solid #c5c3c3;
+}
+
+.button-white, .button-white:focus {
+  background: #FFFFFF;
+  border: 1px solid #c5c3c3;
+}
+
+.button-red, .button-red:focus {
+  background: #FFFFFF;
+  border: 1px solid #E4132D;
+  outline: none;
+
+}
+
+
+footer {
+  margin-top: 4%;
+  background-color: #0D1F2D;
+  height: 6rem;
+  width: 100%;
+}
+
+/* Forms */
+
+.input, .select, .button {
+  height: 2.6rem;
+  padding: 0 2%;
+  outline: none;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  -moz-appearance: none;
+  -moz-border-radius: 0px;
+}
+
+.select {
+  text-align-last: center;
+}
+
+.input, select, .button-xlg, .textarea {
+  width: 20rem;
+}
+
+.button-xxlg {
+  width: 22rem;
+}
+
+.input, .label {
+  display: block;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  color: #6f8691;
+}
+
+.textarea {
+  padding: 1% 2%;
+  outline: none;
+  height: 7rem;
+  line-height: 1.2rem;
+
+}
+
+.circle {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+
+.center {
+  text-align: center;
+  line-height: 2em;
+}
+
+input[type=checkbox] {
+  transform: scale(1.6);
+}
+
+input[type=radio] {
+  transform: scale(1.6);
+}
