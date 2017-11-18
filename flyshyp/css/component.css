@@ -146,6 +146,11 @@ footer {
 
 /* Forms */
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 .input, .select, .button {
   height: 2.6rem;
   padding: 0 2%;
