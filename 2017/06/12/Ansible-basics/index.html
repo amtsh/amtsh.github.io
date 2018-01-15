@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="shinde13amit@gmail.com"><title>Ansible - basics · amtsh</title><meta name="description" content="Ansible can be used for both configuration management and deployment
+
+What is configuration management?In configuration management, we describe the de"><meta name="keywords"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">amtsh</a></h3><div class="description"><p>Amit Shinde</p></div></div></div><ul class="social-links"><li><a target="_blank" href="https://twitter.com/debggr"><i class="fa fa-twitter"></i></a></li><li><a target="_blank" href="https://instagram.com/amiitshiinde"><i class="fa fa-instagram"></i></a></li><li><a target="_blank" href="https://github.com/amtsh"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="by_farbox"><a href="https://hexo.io" target="_blank">Published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">Articles</a></li><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="/links">Projects</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>Ansible - basics</a></h3></div><div class="post-content"><blockquote>
+<p><em>Ansible can be used for both configuration management and deployment</em></p>
+</blockquote>
+<p><strong>What is configuration management?</strong><br>In configuration management, we describe the desired ‘state of the server’</p>
+<ul>
+<li>the right packages should be installed</li>
+<li>configuration files should contain the expected values and have the expected permissions </li>
+<li>the right services are running, and so on</li>
+</ul>
+<p><strong>What is deployment?</strong></p>
+<ul>
+<li>generating binaries or static assets (if necessary)</li>
+<li>copying the required files to the server(s)</li>
+<li>and then starting up the services.</li>
+</ul>
+<hr>
+<p><strong>Hello World</strong><br>Lets try Hello World of ansible<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Create a hello_ansible/ directory and create file named inventory with following content.</span><br><span class="line">127.0.0.1</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> # Create main.yml file with following contents</span><br><span class="line">---</span><br><span class="line">- name: Hello Ansible</span><br><span class="line">  hosts: all</span><br><span class="line"></span><br><span class="line">  tasks:</span><br><span class="line">    - name: Hello World</span><br><span class="line">      shell: echo &quot;Hello World&quot; &gt;&gt; hello.txt</span><br></pre></td></tr></table></figure>
+<p>Finally run it with following command :<br><code>ansible-playbook hello.yml -i inventory --connection=local</code></p>
+<hr>
+<h3 id="Working-of-ansible"><a href="#Working-of-ansible" class="headerlink" title="Working of ansible"></a>Working of ansible</h3><p><img src="https://d1cg27r99kkbpq.cloudfront.net/static/extra/43-ansible-deployment-workflow.png" alt="working"><br><strong>State of Task</strong></p>
+<ul>
+<li><strong>state = ok</strong><br>If the state of the host matches the arguments of the module, then Ansible takes no action on the host and responds with a state of ok.</li>
+<li><strong>state = changed</strong><br> If there is a difference between the state of the host and the arguments to the module, then Ansible will change the state of the host and return changed.</li>
+</ul>
+<hr>
+<h3 id="Ansible-common-terms"><a href="#Ansible-common-terms" class="headerlink" title="Ansible common terms :"></a>Ansible common terms :</h3><p><img src="https://www.safaribooksonline.com/library/view/ansible-up-and/9781491915318/assets/anur_0203.png" alt="ansible-terms"></p>
+<p><strong>PLAYBOOK</strong></p>
+<ul>
+<li>A playbook can have multiple plays. A play can have multiple tasks. A task has exactly one module like git, file, copy, command etc</li>
+</ul>
+<p><strong>INVENTORY FILE</strong></p>
+<ul>
+<li>Contains list of hosts</li>
+<li>hosts can be grouped</li>
+<li>groups of groups can also be created using keyword :children</li>
+</ul>
+<p><strong>VARIABLES</strong></p>
+<ul>
+<li>variables for each group can be placed in group_vars directory with file name that of group</li>
+</ul>
+<p><strong>WHEN</strong></p>
+<ul>
+<li>‘when’ is a conditional that should evaluate to true for the task to be executed.</li>
+</ul>
+<p><strong>REGISTER</strong></p>
+<ul>
+<li>stdout of a command can be copied to a variable using register. this variable can be used in a conditional in another task.</li>
+</ul>
+<p><strong>ANSIBLE GALAXY</strong></p>
+<ul>
+<li>roles are written and shared by community. <a href="https://galaxy.ansible.com/list" target="_blank" rel="noopener">https://galaxy.ansible.com/list</a></li>
+</ul>
+<h2 id="Advantages"><a href="#Advantages" class="headerlink" title="Advantages :"></a>Advantages :</h2><ul>
+<li>Agentless - needs python pre installed in all hosts</li>
+<li>Parallel operations : No repeats</li>
+</ul>
+<p><img src="https://image.slidesharecdn.com/moldcampansibleisthesimplestwaytoautomate-nogifs-150602055102-lva1-app6891/95/ansible-is-the-simplest-way-to-automate-moldcamp-2015-33-638.jpg?cb=1433224413" alt=""><br><img src="https://image.slidesharecdn.com/moldcampansibleisthesimplestwaytoautomate-nogifs-150602055102-lva1-app6891/95/ansible-is-the-simplest-way-to-automate-moldcamp-2015-34-638.jpg?cb=1433224413" alt=""></p>
+<ul>
+<li>Readymade roles written by community at ansible galaxy</li>
+<li>Readability of scripts</li>
+</ul>
+<p><img src="https://image.slidesharecdn.com/moldcampansibleisthesimplestwaytoautomate-nogifs-150602055102-lva1-app6891/95/ansible-is-the-simplest-way-to-automate-moldcamp-2015-8-638.jpg?cb=1433224413" alt=""><img src="https://image.slidesharecdn.com/moldcampansibleisthesimplestwaytoautomate-nogifs-150602055102-lva1-app6891/95/ansible-is-the-simplest-way-to-automate-moldcamp-2015-9-638.jpg?cb=1433224413" alt=""></p>
+<p><strong>More notes about Ansible :</strong></p>
+<ul>
+<li>Ansible default shell type is bourne shell located at /bin/sh. It also supports csh, fish and windows powershell</li>
+<li>Ansible uses python located at /usr/bin/python</li>
+</ul>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-06-12</span><i class="fa fa-tag"></i><a class="tag" href="/tags/ansible/" title="ansible">ansible </a></div></div></div></div><div class="share"><div class="twitter"><a class="fa fa-twitter" target="_blank" href="http://twitter.com/home?status=,amtsh.github.io/2017/06/12/Ansible-basics/,amtsh,Ansible - basics,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2017/06/21/Python/" title="Python">Previous</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/2016/02/15/Writing-clean-code/" title="Writing clean code">Next</a></li></ul></div></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="shinde13amit@gmail.com"><title>Writing clean code · amtsh</title><meta name="description" content="Contents
+
+Meaningful names
+Functions/Methods
+
+Meaningful names
+use intention-revealing names
+use pronouncable names
+The length of a name should corres"><meta name="keywords"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">amtsh</a></h3><div class="description"><p>Amit Shinde</p></div></div></div><ul class="social-links"><li><a target="_blank" href="https://twitter.com/debggr"><i class="fa fa-twitter"></i></a></li><li><a target="_blank" href="https://instagram.com/amiitshiinde"><i class="fa fa-instagram"></i></a></li><li><a target="_blank" href="https://github.com/amtsh"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="by_farbox"><a href="https://hexo.io" target="_blank">Published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">Articles</a></li><li><a href="/about">About</a></li><li><a href="/archives">Archive</a></li><li><a href="/links">Projects</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>Writing clean code</a></h3></div><div class="post-content"><p><em>Contents</em></p>
+<ul>
+<li><em>Meaningful names</em></li>
+<li><em>Functions/Methods</em></li>
+</ul>
+<h2 id="Meaningful-names"><a href="#Meaningful-names" class="headerlink" title="Meaningful names"></a>Meaningful names</h2><ul>
+<li>use intention-revealing names</li>
+<li>use pronouncable names</li>
+<li>The length of a name should correspond to the size of its scope.</li>
+<li>Class names should be <strong>noun</strong> and not verbs. (avoid words like Manager, Processor, Info, Data)</li>
+<li>Methods names should be <strong>verb</strong> . Accessors (get), Mutators (set) and Predicates (is) have such prefixes.<br>Choose one word for a concept and stick with it. e,g Choose one between fetch, retrieve, get</li>
+<li><strong>Describe the thing that you are visualising</strong></li>
+<li><strong>The author is responsible for making himself clear.</strong></li>
+</ul>
+<h2 id="Functions-Methods"><a href="#Functions-Methods" class="headerlink" title="Functions/Methods"></a>Functions/Methods</h2><ul>
+<li>functions should <strong>do one thing</strong> and <strong>do it well</strong></li>
+<li>they should be <strong>SMALL</strong></li>
+<li>they should be <strong>SMALLER</strong> than that</li>
+<li>all your functions together can <strong>tell a story</strong></li>
+<li>the <strong>blocks</strong> following if else , while statement can be just be one line, preferably a function call, where the function name provides nice description</li>
+<li>the <strong>indent level</strong> of function should never be greater than one or two</li>
+<li>hence complex nested if else should be avoided</li>
+<li>the function should be at <strong>particular level of abstraction</strong></li>
+<li>one function should not have multiple levels</li>
+<li>functions should be placed one below another like a story such that it is easy <strong>reading code from top to bottom</strong> like a newspaper article.</li>
+</ul>
+<h4 id="Function-arguments"><a href="#Function-arguments" class="headerlink" title="Function arguments"></a><em>Function arguments</em></h4><ul>
+<li>the ideal number of arguments to a function <strong>should be zero</strong> , </li>
+<li>one is acceptable, when we ask question <code>fileExists(filename)</code> or operating <code>openFile(filename)</code>. <strong>Flag arguments:</strong> Passing a boolean to a function is very poor practice.</li>
+<li>two arguments are tolerable, <code>createPoint(0, 0)</code> is reasonable<br>three should be avoided and four should have specific reason</li>
+</ul>
+<h4 id="Switch-statement"><a href="#Switch-statement" class="headerlink" title="Switch statement"></a><em>Switch statement</em></h4><ul>
+<li>its hard to make a small switch statement</li>
+<li>switch statement can be tolerated if they appear only once and are used to create polymorphic objects</li>
+</ul>
+<h4 id="Command-query-separation"><a href="#Command-query-separation" class="headerlink" title="Command query separation"></a>Command query separation</h4><ul>
+<li>Function should either do something or answer something but not both.</li>
+<li>It should either change the state of object or return some information about it.</li>
+</ul>
+<h4 id="Exception-Handling"><a href="#Exception-Handling" class="headerlink" title="Exception Handling"></a>Exception Handling</h4><ul>
+<li>Function should do one thing and <strong>error handling is one thing.</strong></li>
+<li>if the keyword <code>try</code> exists in a function, it should be the very first word in the function and that there should be nothing after the <code>catch/finally</code> blocks.</li>
+</ul>
+<h3 id="How-to-write-such-perfect-functions"><a href="#How-to-write-such-perfect-functions" class="headerlink" title="How to write such perfect functions?"></a>How to write such perfect functions?</h3><ul>
+<li>Make it work first no matter with good or bad code.</li>
+<li>Write unit test covering success and failure cases.</li>
+<li>Now, <ul>
+<li>refine that code, </li>
+<li>split out functions, </li>
+<li>eliminate duplication, </li>
+<li>shrink the methods and reorder them</li>
+</ul>
+</li>
+</ul>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2016-02-15</span><i class="fa fa-tag"></i><a class="tag" href="/tags/code/" title="code">code </a></div></div></div></div><div class="share"><div class="twitter"><a class="fa fa-twitter" target="_blank" href="http://twitter.com/home?status=,amtsh.github.io/2016/02/15/Writing-clean-code/,amtsh,Writing clean code,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2017/06/12/Ansible-basics/" title="Ansible - basics">Previous</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/2016/01/15/Learning-how-to-learn/" title="Learning how to learn">Next</a></li></ul></div></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
